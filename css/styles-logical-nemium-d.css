@@ -1,0 +1,489 @@
+:root {
+    font-size: 16px; /*Valor por defecto, base para los em y rem */
+    --white: white;
+    --black: black;
+    --black10: rgba(97, 97, 97, 0.2);
+    --black21: #212121;
+    --black29: #212429;
+    --black42: #424242;
+    --black61: #616161;
+    --blue55: #5551FF;
+    --inactive: rgba(142, 45, 226, 0.5);
+}
+
+body {
+    color: var(--black42);
+    /* Utilizando Google Fonts o cualquier proveedor de fuentes*/
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+.banner {
+    block-size: 96px;
+    background-image: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url(../images/patron-2.svg);
+    background-size: Auto 50px;
+}
+
+.header-content {
+    padding-inline: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    color: var(--black);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-block-start: 40px;
+    margin-block-end: 16px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-block: 40px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-block: 16px;
+}
+
+header {
+    font-size: 14px;
+    color: var(--black61);
+}
+
+header li {
+    color: var(--black61);
+    padding-block: 8px;
+    padding-inline-start: 8px;
+}
+
+header a {
+    color: var(--black61);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--white);
+}
+
+header li:hover {
+    background-color: var(--blue55);
+}
+
+header li:hover a {
+    color: var(--white);
+}
+
+header li:hover::before {
+    color: var(--white);
+}
+
+nav h3  {
+    font-size: 14px;
+    color: var(--black);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+a {
+    color: var(--black21);
+}
+
+nav ol {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+nav ol li::before {
+    content: counter(list-item) ". ";
+}
+
+#project-modes {
+    margin-block-end: 40px;
+}
+
+#project-modes ul {
+    padding-inline-start: 0px;
+}
+
+#project-modes li {
+    margin: 0px;
+    padding-block: 8px;
+    padding-inline-start: 8px;
+    border-radius: 4px;
+    list-style: none;
+}
+
+#project-modes a:hover {
+    color: var(--white);
+}
+
+#project-modes li:hover {
+    background-color: var(--black);
+}
+
+#project-modes li:hover a {
+    color: var(--white);
+}
+
+hr {
+    margin-block: 40px;
+    border-color: var(--black10);
+}
+
+.txt-align-center{
+    text-align: center;
+}
+
+.section-content {
+    counter-reset: subtitle-list;
+}
+
+.section-content img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+.section-content h3 {
+    counter-increment: subtitle-list;
+}
+
+.section-content h3::before {
+    content: counter(subtitle-list)'. ';
+}
+
+#box-model h3::before {
+    content: '';
+}
+
+.background-icon {
+    margin: 0 auto;
+    margin-block-start: 40px;
+    inline-size: 64px;
+    block-size: 64px;
+    background-color: var(--black);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-icon img {
+    inline-size: 45px;
+    block-size: 45px;
+}
+
+.without-background-icon {
+    margin: 0 auto;
+    margin-block-start: 40px;
+    inline-size: 64px;
+    block-size: 64px;
+}
+
+#github-icon {
+    content: url(../icons/icon-github.svg);
+}
+
+#concepts-essential h3 {
+    margin-block-start: 40px;
+}
+
+#box-model h3 {
+    margin-block-start: 40px;
+}
+
+#box-model ul {
+    padding-inline-start: 16px;
+}
+
+#box-model ol {
+    padding-inline-start: 16px;
+}
+
+pre {
+    background-color: var(--white);
+    padding-inline: 40px;
+    padding-block: 40px;
+    text-align: left;
+    overflow: auto;
+    border-radius: 8px;
+    border: 10px solid var(--blue55);
+    /*Desplazmiento x, desplazmiento y, difuminado, spread (cuanto se expande)*/
+    box-shadow: -10px 10px 0 0 #ABAAF6;
+    margin-block-end: 30px;
+}
+
+.blockquote-section {
+    margin-block: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+blockquote {
+    font-size: 16px;
+    margin-block: 0px;
+    margin-inline: 0px;
+    padding-inline-start: 16px;
+    border-inline-start: 4px solid var(--blue55);
+}
+
+blockquote p {
+    color: var(--black42);
+    margin-block: 0px;
+    text-align: left;
+}
+
+blockquote p:last-child {
+    color: var(--black61);
+    margin-block-start: 16px;
+}
+
+blockquote p:last-child::before {
+    content: '- ';
+}
+
+p {
+    color: var(--black42);
+}
+
+p span {
+    color: var(--blue55);
+}
+
+#mail-contact {
+    color: var(--black);
+}
+
+.main {
+    order: 1;
+}
+
+.main hr {
+    display: none;
+}
+
+.wrapper {
+    max-inline-size: 902px;
+    margin: auto;
+}
+
+.main-content {
+    padding-inline: 16px;
+}
+
+.slider-container {
+    display: block;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /*Se utiliza para que no realice el salto de linea*/
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.slide-video {
+    margin: 0;
+    /*Bloques que se comportan como si estuvieran en linea*/
+    display: inline-block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 12px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: var(--inactive);
+    border-radius: 50%;
+}
+
+.slider-bullet:first-child {
+    background-color: var(--blue55);
+}
+
+.form {
+    display: inline-block;
+    inline-size: 100%;
+    margin-block-end: 40px;
+}
+
+.form input {
+    inline-size: 100%;
+    block-size: 48px;
+    box-sizing: border-box;
+    border: 1px solid var(--black61);
+    border-radius: 90px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    font-size: 16px;
+    margin-block-end: 24px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.form input::-webkit-input-placeholder {
+    color: var(--black42);
+}
+
+.form div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form input[type="submit"] {
+    cursor: pointer;
+    inline-size: 119px;
+    block-size: 48px;
+    background-color: var(--blue55);
+    border-color: var(--blue55);
+    color: var(--white);
+    position: absolute;
+}
+
+#form-section h2 {
+    font-size: 20px;
+    margin-block-end: 16px;
+}
+
+footer {
+    padding-block: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black29);
+}
+
+footer p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 37px;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    color: var(--white);
+}
+
+footer img {
+    inline-size: 18px;
+    block-size: 18px;
+    margin-left: 9px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1366px) {
+    .banner {
+        block-size: 350px;
+    }
+
+    .main {
+        order: 1;
+    }
+
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+        order: 2;
+    }
+
+    .header-content {
+        position: relative;
+        inset-block-start: 50px;
+        padding-inline: 0;
+    }
+
+    header {
+        position: absolute;
+        margin-block-start: 0px;
+        inset-block-start: 0;
+        inset-inline-start: 930px;
+        inline-size: 180px;
+        order: 2;
+    }
+
+    #project-modes {
+        margin-block-end: 104px;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .background-icon img {
+        inline-size: 55px;
+        block-size: 55px;
+    }
+
+    .background-icon {
+        inline-size: 80px;
+        block-size: 80px;
+    }
+
+    .without-background-icon {
+        inline-size: 80px;
+        block-size: 80px;
+    }
+
+    .blockquote-section {
+        margin-block: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    blockquote {
+        font-size: 24px;
+        margin-inline: 40px;
+    }
+
+    #form-section h2 {
+        font-size: 24px;
+        margin-block-end: 16px;
+    }
+
+    .form {
+        display: flex;
+        inline-size: auto;
+        margin-block-end: 80px;
+    }
+
+    .form input {
+        inline-size: 280px;
+        block-size: 48px;
+    }
+
+    .form div {
+        margin-inline-start: 16px;
+    }
+
+    footer {
+        margin-block-start: 80px;
+    }
+
+    footer p {
+        font-size: 32px;
+    }
+}
